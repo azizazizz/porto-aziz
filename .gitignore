@@ -1,0 +1,41 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Env files (never commit secrets)
+.env
+.env.*
+!.env.example
+
+# Raw/unoptimized screenshots and photos (only the cropped+compressed copies are used)
+src/assets/projects/**/Screenshot*.png
+src/assets/projects/**/WhatsApp Image*.jpeg
+
+# Certificate PDFs (~12MB). Only the compressed .jpg previews are committed and
+# nothing links to the originals, so the gallery works fine without them.
+src/assets/certificates/*.pdf
+
+# Raw/uncropped logo sources — only the processed badges (clean file names,
+# e.g. infradigital.png) are committed.
+src/assets/logos/logo *.png
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

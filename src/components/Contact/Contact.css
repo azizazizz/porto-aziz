@@ -1,0 +1,74 @@
+.contact-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 18px;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.contact-heading {
+  font-size: clamp(24px, 4vw, 32px);
+}
+
+.contact-text {
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--text);
+}
+
+.contact-email {
+  font-size: 19px;
+  font-weight: 600;
+  color: var(--accent);
+  padding: 12px 26px;
+  border: 1px solid var(--accent);
+  border-radius: 6px;
+  margin-top: 8px;
+  transition: background 0.15s ease;
+}
+
+.contact-email:hover {
+  background: var(--accent-soft);
+}
+
+.contact-socials {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.contact-socials a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--text-dim);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 8px 16px;
+  transition:
+    color 0.15s ease,
+    border-color 0.15s ease,
+    background 0.15s ease,
+    transform 0.15s ease;
+}
+
+.social-icon {
+  width: 15px;
+  height: 15px;
+}
+
+.contact-socials a:hover {
+  color: var(--text-bright);
+  border-color: var(--social-color);
+  background: color-mix(in srgb, var(--social-color) 12%, transparent);
+  transform: translateY(-1px);
+}
+
+.contact-socials a:hover .social-icon {
+  color: var(--social-color);
+}
