@@ -178,6 +178,10 @@ export const translations = {
           title: 'Ready4AI & Security Training',
           issuer: 'InfraDigital Foundation × Microsoft · Aug 2024',
         },
+        '14-frontend-engineer-kemnaker': {
+          title: 'Talent & Innovation Hub — A Day in the Life of a Front End Engineer',
+          issuer: 'Indonesian Ministry of Manpower · Aug 2026',
+        },
       },
     },
     contact: {
@@ -367,6 +371,10 @@ export const translations = {
         '13-ready4ai-security': {
           title: 'Pelatihan Ready4AI & Security',
           issuer: 'InfraDigital Foundation × Microsoft · Agu 2024',
+        },
+        '14-frontend-engineer-kemnaker': {
+          title: 'Talent & Innovation Hub — A Day in Life of a Front End Engineer',
+          issuer: 'Kementerian Ketenagakerjaan RI · Agu 2026',
         },
       },
     },
