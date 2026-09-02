@@ -1,3 +1,4 @@
+import { FaMapMarkerAlt, FaRegCheckCircle } from 'react-icons/fa'
 import { useTypewriter } from '../../hooks/useTypewriter'
 import { useLanguage } from '../../hooks/useLanguage'
 import { PROJECTS_META } from '../../data/projects'
@@ -29,6 +30,17 @@ function Hero() {
         </p>
 
         <p className="hero-bio">{t.hero.bio}</p>
+
+        <ul className="hero-meta">
+          <li>
+            <FaMapMarkerAlt className="hero-meta-icon" aria-hidden="true" />
+            {t.hero.location}
+          </li>
+          <li>
+            <FaRegCheckCircle className="hero-meta-icon" aria-hidden="true" />
+            {t.hero.availability}
+          </li>
+        </ul>
 
         <dl className="hero-stats">
           {stats.map((stat) => (

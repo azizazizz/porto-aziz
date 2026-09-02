@@ -25,9 +25,11 @@ export const translations = {
       switch: 'Switch language',
     },
     hero: {
-      status: 'Fresh graduate — open to new opportunities',
+      status: 'Fresh graduate',
       roles: ['Web Developer.'],
       bio: 'I build web applications end to end — from the database schema to the very last pixel. Informatics graduate who cares as much about logic that holds up as about interfaces people genuinely enjoy using.',
+      location: 'Bekasi, Indonesia',
+      availability: 'Available to start immediately',
       stats: [
         { value: '3.69', label: 'GPA / 4.00' },
         { value: 'Top 10%', label: 'Coding Camp 2025' },
@@ -220,9 +222,11 @@ export const translations = {
       switch: 'Ganti bahasa',
     },
     hero: {
-      status: 'Fresh graduate — terbuka untuk kesempatan baru',
+      status: 'Fresh graduate',
       roles: ['Web Developer.'],
       bio: 'Saya membangun aplikasi web dari hulu ke hilir — dari skema database sampai piksel terakhir. Lulusan Informatika yang sama peduli pada logika yang kokoh dan antarmuka yang benar-benar nyaman dipakai.',
+      location: 'Bekasi, Indonesia',
+      availability: 'Bersedia bekerja secepatnya',
       stats: [
         { value: '3,69', label: 'IPK / 4,00' },
         { value: 'Top 10%', label: 'Coding Camp 2025' },
