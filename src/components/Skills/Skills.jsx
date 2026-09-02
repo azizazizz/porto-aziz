@@ -5,6 +5,7 @@ import {
   SiCodeigniter,
   SiFlutter,
   SiJavascript,
+  SiMysql,
   SiPhp,
   SiTailwindcss,
   SiVuedotjs,
@@ -32,7 +33,15 @@ const GROUPS = [
       { name: 'CodeIgniter', icon: SiCodeigniter, color: '#ef4223' },
       { name: 'Node.js', icon: FaNodeJs, color: '#339933' },
       { name: 'Hapi.js', icon: null },
-      { name: 'SQL', icon: FaDatabase, color: '#4479a1' },
+    ],
+  },
+  {
+    key: 'database',
+    items: [
+      { name: 'MySQL', icon: SiMysql, color: '#4479a1' },
+      // no brand colour: SQL is the language, not a product, and #4479a1 is
+      // MySQL's own blue — reusing it here would read as a duplicate chip
+      { name: 'SQL', icon: FaDatabase, color: null },
     ],
   },
   {

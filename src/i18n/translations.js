@@ -52,6 +52,7 @@ export const translations = {
       groups: {
         frontend: 'Frontend',
         backend: 'Backend',
+        database: 'Database',
         mobile: 'Mobile',
         tools: 'Tools & Other',
       },
@@ -246,6 +247,7 @@ export const translations = {
       groups: {
         frontend: 'Frontend',
         backend: 'Backend',
+        database: 'Basis Data',
         mobile: 'Mobile',
         tools: 'Perkakas & Lainnya',
       },
