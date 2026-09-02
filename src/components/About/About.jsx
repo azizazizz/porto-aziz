@@ -19,28 +19,22 @@ function About() {
 
       <p className="about-lead">{t.about.lead}</p>
 
-      <div className="about-grid">
-        <div className="about-copy">
-          <p>{t.about.p1}</p>
-          <p>{t.about.p2}</p>
-          <p>{t.about.p3}</p>
-          <p className="about-stack-label">{t.about.stackLabel}</p>
-          <ul className="about-stack">
-            {STACK.map((item) => (
-              <li key={item}>{item}</li>
-            ))}
-          </ul>
+      <div className="about-copy">
+        <p>{t.about.p1}</p>
+        <p>{t.about.p2}</p>
+        <p>{t.about.p3}</p>
+        <p className="about-stack-label label">{t.about.stackLabel}</p>
+        <ul className="about-stack">
+          {STACK.map((item) => (
+            <li key={item}>{item}</li>
+          ))}
+        </ul>
 
-          <a href={CV_URL} target="_blank" rel="noreferrer" className="about-cv">
-            <FaRegFilePdf className="about-cv-icon" />
-            {t.about.cv}
-            <span aria-hidden="true">↗</span>
-          </a>
-        </div>
-
-        <div className="about-figure" aria-hidden="true">
-          <span>{'{ }'}</span>
-        </div>
+        <a href={CV_URL} target="_blank" rel="noreferrer" className="about-cv">
+          <FaRegFilePdf className="about-cv-icon" />
+          {t.about.cv}
+          <span aria-hidden="true">↗</span>
+        </a>
       </div>
     </section>
   )

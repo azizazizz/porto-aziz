@@ -1,41 +1,45 @@
 .section-heading-block {
-  margin-bottom: 40px;
+  margin-bottom: 36px;
 }
 
-.section-heading {
+.section-eyebrow {
   display: flex;
   align-items: center;
   gap: 14px;
-  font-size: 20px;
-  white-space: nowrap;
-}
-
-.section-heading .num {
+  margin-bottom: 12px;
   color: var(--accent);
-  font-weight: 500;
 }
 
-.section-heading .rule {
-  flex: 1;
+/* short rule that fades out — a full-width divider made the heading read as a
+   log line, which is exactly the look this section is moving away from */
+.section-eyebrow .rule {
+  width: 64px;
   height: 1px;
-  background: var(--border);
-  min-width: 40px;
+  background: linear-gradient(
+    to right,
+    color-mix(in srgb, var(--accent) 60%, transparent),
+    transparent
+  );
+}
+
+.section-heading {
+  font-size: var(--fs-h2);
+  line-height: 1.15;
 }
 
 .section-subtitle {
-  margin-top: 10px;
-  font-size: 13px;
+  margin-top: 12px;
+  max-width: 54ch;
+  font-size: var(--fs-sm);
   color: var(--text-dim);
-  letter-spacing: 0.2px;
 }
 
 @media (max-width: 560px) {
-  .section-heading {
-    font-size: 17px;
-    gap: 10px;
+  .section-heading-block {
+    margin-bottom: 26px;
   }
 
   .section-subtitle {
-    font-size: 12.5px;
+    margin-top: 8px;
   }
 }

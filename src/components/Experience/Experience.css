@@ -22,6 +22,7 @@
   border-radius: 50%;
   border: 2px solid var(--accent);
   background: var(--bg);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 14%, transparent);
   margin-top: 6px;
   flex-shrink: 0;
 }
@@ -32,7 +33,7 @@
   justify-content: center;
   width: 28px;
   height: 28px;
-  border-radius: 8px;
+  border-radius: var(--radius-sm);
   border: 1px solid var(--border);
   background: var(--bg-elevated);
   flex-shrink: 0;
@@ -55,23 +56,28 @@
 .timeline-line {
   flex: 1;
   width: 1px;
-  background: var(--border);
-  margin: 4px 0;
+  background: linear-gradient(
+    to bottom,
+    color-mix(in srgb, var(--accent) 35%, transparent),
+    var(--border)
+  );
+  margin: 6px 0;
 }
 
 .timeline-content {
-  padding-bottom: 40px;
+  padding-bottom: 44px;
 }
 
 .timeline-date {
-  font-size: 12px;
   color: var(--text-dim);
-  margin-bottom: 6px;
+  margin-bottom: 8px;
 }
 
 .timeline-title {
-  font-size: 15px;
+  font-family: var(--font-display);
+  font-size: var(--fs-h4);
   font-weight: 600;
+  letter-spacing: -0.015em;
   color: var(--text-bright);
 }
 
@@ -92,9 +98,9 @@
 .timeline-highlights li {
   position: relative;
   padding-left: 16px;
-  font-size: 13px;
+  font-size: var(--fs-sm);
   color: var(--text);
-  line-height: 1.7;
+  line-height: 1.75;
 }
 
 .timeline-highlights li::before {
@@ -102,4 +108,14 @@
   position: absolute;
   left: 0;
   color: var(--accent);
+}
+
+@media (max-width: 560px) {
+  .timeline-entry {
+    gap: 16px;
+  }
+
+  .timeline-content {
+    padding-bottom: 32px;
+  }
 }

@@ -81,7 +81,7 @@ function Certificates() {
       ) : (
         <>
           <div className="cert-toolbar">
-            <p className="cert-hint">
+            <p className="cert-hint label">
               {t.certificates.hint} <span aria-hidden="true">→</span>
             </p>
             <div className="cert-arrows">

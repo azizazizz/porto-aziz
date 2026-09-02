@@ -55,7 +55,7 @@ function CertificateModal({ certificates, index, onIndexChange, onClose }) {
 
           {many && (
             <>
-              <span className="cert-modal-counter">
+              <span className="cert-modal-counter numeral">
                 {index + 1} / {certificates.length}
               </span>
               <button

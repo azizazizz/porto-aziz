@@ -53,7 +53,7 @@ function ProjectModal({ project, onClose }) {
               />
               {images.length > 1 && (
                 <>
-                  <span className="modal-counter">
+                  <span className="modal-counter numeral">
                     {index + 1} / {images.length}
                   </span>
                   <button

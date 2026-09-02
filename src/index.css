@@ -1,75 +1,138 @@
+/* ----------------------------------------------------------------------------
+   COLOUR — one accent, warm neutrals, nothing else.
+
+   An earlier pass gave every section its own hue (teal / blue / purple / pink).
+   Six accents across one page reads as decoration rather than intent, so the
+   palette is back to a single amber. The only other colour on the page is
+   borrowed from real brands — tech logos on the skill chips, and the social
+   links — which is colour that means something.
+
+   The neutrals are warm-leaning on purpose: amber sits badly on the cold,
+   near-black ground this used to have.
+   ---------------------------------------------------------------------------- */
+
 :root {
   /* dark theme (default) */
-  --bg: #0b0d10;
-  --bg-elevated: #14161a;
-  --bg-inset: #0f1114;
-  --bg-hover: #191c21;
+  --bg: #101012;
+  --bg-elevated: #17181b;
+  --bg-inset: #131316;
+  --bg-hover: #1d1e22;
 
-  --border: #23262c;
-  --border-strong: #34383f;
+  --border: #26272c;
+  --border-strong: #3a3b42;
 
-  --text: #a8adb6;
-  --text-dim: #62666f;
-  --text-bright: #edeef0;
+  --text: #b7b9c0;
+  --text-dim: #7e8089;
+  --text-bright: #f3f3f5;
 
-  --accent: #d9a441;
-  --accent-soft: rgba(217, 164, 65, 0.1);
-  --accent-contrast: #14161a;
+  --accent: #ddab55;
+  --accent-soft: rgba(221, 171, 85, 0.12);
+  --accent-contrast: #17181b;
 
-  --green: #6fae83;
-  --blue: #6e9bc4;
-  --pink: #c081a3;
-  --purple: #9c8ec9;
-  --red: #c56b62;
+  --green: #6fc490; /* the "available" status dot */
+  --blue: #6f96c4; /* the cool half of the hero wash */
 
-  --shadow: 0 16px 40px -12px rgba(0, 0, 0, 0.5);
+  --shadow-sm: 0 2px 10px -4px rgba(0, 0, 0, 0.5);
+  --shadow: 0 18px 44px -14px rgba(0, 0, 0, 0.55);
+  --glow: 0 18px 44px -18px color-mix(in srgb, var(--accent) 45%, transparent);
 }
 
 :root[data-theme='light'] {
-  --bg: #faf9f6;
+  --bg: #fbfaf7;
   --bg-elevated: #ffffff;
-  --bg-inset: #f1efe9;
-  --bg-hover: #eeece4;
+  --bg-inset: #f3f1ec;
+  --bg-hover: #eeebe3;
 
-  --border: #e3e0d7;
-  --border-strong: #cbc7b9;
+  --border: #e4e0d7;
+  --border-strong: #cac5b8;
 
-  --text: #504e46;
-  --text-dim: #8a8778;
-  --text-bright: #1c1b17;
+  --text: #4b4941;
+  --text-dim: #716e64;
+  --text-bright: #171613;
 
-  --accent: #9c6b1f;
-  --accent-soft: rgba(156, 107, 31, 0.1);
+  --accent: #8d5f18;
+  --accent-soft: rgba(141, 95, 24, 0.1);
   --accent-contrast: #ffffff;
 
-  --green: #4a8560;
-  --blue: #3f6f9c;
-  --pink: #a15080;
-  --purple: #6b57a3;
-  --red: #ad4c40;
+  --green: #3f7c55;
+  --blue: #3d6a94;
 
-  --shadow: 0 16px 40px -12px rgba(28, 27, 23, 0.12);
+  --shadow-sm: 0 2px 10px -4px rgba(28, 27, 23, 0.12);
+  --shadow: 0 18px 44px -14px rgba(28, 27, 23, 0.16);
+  --glow: 0 18px 44px -18px color-mix(in srgb, var(--accent) 35%, transparent);
 }
 
 * {
   box-sizing: border-box;
 }
 
+/* ----------------------------------------------------------------------------
+   TYPE — three fonts, three jobs, no exceptions.
+
+     Space Grotesk  headings, card titles, figures
+     Inter          everything meant to be read, and every piece of UI
+     JetBrains Mono index numerals (01, 02, 1/5) and the hero typewriter — only
+
+   Monospace anywhere else is what made this page read as a terminal.
+
+   Every font-size on the site comes from the scale below and nowhere else.
+   ---------------------------------------------------------------------------- */
+
 :root {
+  --font-display: 'Space Grotesk', 'Inter', system-ui, sans-serif;
+  --font-sans:
+    'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
   --font-mono:
     'JetBrains Mono', ui-monospace, 'SFMono-Regular', Consolas,
     'Liberation Mono', monospace;
-  --radius: 8px;
-  --content-width: 860px;
+
+  --fs-hero: clamp(36px, 8.5vw, 76px);
+  --fs-glyph: 44px; /* big decorative glyphs: { }, 01, PDF */
+  --fs-h2: clamp(26px, 4vw, 36px);
+  --fs-figure: 25px; /* headline numerals: hero stats */
+  --fs-role: clamp(16px, 2.6vw, 20px); /* the typewriter line */
+  --fs-h3: 19px;
+  --fs-icon: 20px; /* chevrons, arrows, the logo dot */
+  --fs-h4: 16px;
+  --fs-body: 16px;
+  --fs-sm: 14.5px;
+  --fs-xs: 13px;
+  --fs-label: 11.5px;
+
+  /* Prose rule: page-level copy is --fs-body, copy inside a card or list is
+     --fs-sm, supporting meta is --fs-xs, small caps labels are .label. */
+
+  --radius-sm: 8px;
+  --radius: 12px;
+  --radius-lg: 18px;
+  --content-width: 960px;
 
   color-scheme: dark light;
   color: var(--text);
   background: var(--bg);
-  font: 16px/1.65 var(--font-mono);
+  font: var(--fs-body) / 1.7 var(--font-sans);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* The single small-caps label recipe. Every eyebrow, group label, date and
+   hint on the page uses this class — no per-component variants. */
+.label {
+  font-size: var(--fs-label);
+  font-weight: 600;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  line-height: 1.4;
+}
+
+/* Index numerals — the one place monospace survives outside the typewriter. */
+.numeral {
+  font-family: var(--font-mono);
+  font-size: var(--fs-label);
+  font-weight: 500;
+  letter-spacing: 0.1em;
 }
 
 html {
@@ -108,7 +171,7 @@ main {
 }
 ::-webkit-scrollbar-thumb {
   background: var(--border-strong);
-  border-radius: 8px;
+  border-radius: var(--radius-sm);
 }
 ::-webkit-scrollbar-thumb:hover {
   background: var(--text-dim);
@@ -117,8 +180,9 @@ main {
 h1,
 h2,
 h3 {
-  font-family: var(--font-mono);
+  font-family: var(--font-display);
   font-weight: 600;
+  letter-spacing: -0.02em;
   color: var(--text-bright);
   margin: 0;
 }
@@ -133,18 +197,26 @@ a {
 }
 
 button {
-  font-family: var(--font-mono);
+  font-family: var(--font-sans);
   cursor: pointer;
 }
 
+/* 76px top and bottom used to be 104px, which put 208px of dead space between
+   every numbered section and made the page feel padded out rather than paced. */
 .section {
   width: min(var(--content-width), 100%);
   margin: 0 auto;
-  padding: 96px 24px;
+  padding: 76px 24px;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 720px) {
   .section {
-    padding: 64px 20px;
+    padding: 56px 20px;
+  }
+}
+
+@media (max-width: 420px) {
+  .section {
+    padding: 48px 16px;
   }
 }

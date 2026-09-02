@@ -1,15 +1,12 @@
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 36px 32px;
+  gap: 40px 32px;
 }
 
 .skill-group-label {
-  font-size: 12px;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--text-dim);
-  margin-bottom: 14px;
+  color: var(--accent);
+  margin-bottom: 16px;
 }
 
 .skill-chips {
@@ -22,15 +19,18 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-size: 13px;
+  font-size: var(--fs-sm);
+  font-weight: 500;
   color: var(--text);
   border: 1px solid var(--border);
   border-radius: 999px;
-  padding: 7px 14px 7px 12px;
+  background: var(--bg-elevated);
+  padding: 8px 15px 8px 13px;
   transition:
     border-color 0.15s ease,
     color 0.15s ease,
     background 0.15s ease,
+    box-shadow 0.15s ease,
     transform 0.15s ease;
 }
 
@@ -45,12 +45,13 @@
   border-color: var(--chip-color);
   background: color-mix(in srgb, var(--chip-color) 12%, transparent);
   color: var(--text-bright);
-  transform: translateY(-1px);
+  box-shadow: 0 6px 18px -10px color-mix(in srgb, var(--chip-color) 80%, transparent);
+  transform: translateY(-2px);
 }
 
 @media (max-width: 560px) {
   .skills-grid {
     grid-template-columns: 1fr;
-    gap: 28px;
+    gap: 30px;
   }
 }

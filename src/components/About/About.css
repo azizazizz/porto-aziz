@@ -1,38 +1,35 @@
 .about-lead {
   position: relative;
-  max-width: 640px;
-  margin-bottom: 36px;
+  max-width: 60ch;
+  margin-bottom: 32px;
   padding-left: 20px;
   border-left: 2px solid var(--accent);
-  font-size: 16.5px;
-  line-height: 1.75;
-  color: var(--text-bright);
+  font-family: var(--font-display);
+  font-size: var(--fs-h3);
   font-weight: 500;
-}
-
-.about-grid {
-  display: grid;
-  grid-template-columns: 1.5fr 1fr;
-  gap: 48px;
-  align-items: start;
+  line-height: 1.6;
+  letter-spacing: -0.015em;
+  color: var(--text-bright);
 }
 
 .about-copy {
   display: flex;
   flex-direction: column;
   gap: 18px;
+  /* capped for line length now that the copy runs full width — the decorative
+     panel that used to fill the right column was empty weight, so it is gone */
+  max-width: 68ch;
 }
 
 .about-copy p {
-  font-size: 14.5px;
-  line-height: 1.85;
+  font-size: var(--fs-body);
+  line-height: 1.8;
   color: var(--text);
 }
 
 .about-stack-label {
   color: var(--text-dim);
-  font-size: 13px;
-  margin-top: 6px;
+  margin-top: 8px;
 }
 
 .about-stack {
@@ -47,7 +44,7 @@
 .about-stack li {
   position: relative;
   padding-left: 16px;
-  font-size: 13px;
+  font-size: var(--fs-sm);
   color: var(--text);
 }
 
@@ -63,20 +60,23 @@
   display: inline-flex;
   align-items: center;
   gap: 9px;
-  margin-top: 14px;
-  padding: 11px 20px;
-  font-size: 13.5px;
+  margin-top: 16px;
+  padding: 12px 22px;
+  font-size: var(--fs-sm);
+  font-weight: 500;
   color: var(--accent);
   border: 1px solid var(--accent);
-  border-radius: 6px;
+  border-radius: 999px;
   transition:
     background 0.15s ease,
-    box-shadow 0.15s ease;
+    box-shadow 0.15s ease,
+    transform 0.15s ease;
 }
 
 .about-cv:hover {
   background: var(--accent-soft);
   box-shadow: 0 0 0 3px var(--accent-soft);
+  transform: translateY(-1px);
 }
 
 .about-cv-icon {
@@ -84,31 +84,8 @@
   height: 15px;
 }
 
-.about-figure {
-  aspect-ratio: 1;
-  border-radius: var(--radius);
-  border: 1px solid var(--border);
-  background:
-    linear-gradient(155deg, var(--accent-soft), transparent 60%),
-    var(--bg-elevated);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--border-strong);
-  font-size: 44px;
-  font-weight: 600;
-}
-
 @media (max-width: 720px) {
   .about-lead {
-    font-size: 15px;
-    margin-bottom: 28px;
-  }
-  .about-grid {
-    grid-template-columns: 1fr;
-  }
-  .about-figure {
-    max-width: 180px;
-    order: -1;
+    margin-bottom: 26px;
   }
 }

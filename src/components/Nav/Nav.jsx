@@ -67,7 +67,7 @@ function Nav() {
               onClick={handleClick(link.id)}
               className={`nav-link${active === link.id ? ' active' : ''}`}
             >
-              <span className="num">{link.num}.</span>
+              <span className="num numeral">{link.num}</span>
               {t.nav[link.key]}
             </a>
           ))}

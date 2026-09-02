@@ -67,7 +67,7 @@ function Projects() {
             </div>
 
             <div className="project-content">
-              <span className="project-index">{String(i + 1).padStart(2, '0')}</span>
+              <span className="project-index numeral">{String(i + 1).padStart(2, '0')}</span>
               <h3 className="project-title">{project.name}</h3>
               <p className="project-desc">{project.description}</p>
               <p className="project-tags">{project.tags.join('  ·  ')}</p>

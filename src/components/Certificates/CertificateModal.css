@@ -32,7 +32,7 @@
   overflow-y: auto;
   background: var(--bg-elevated);
   border: 1px solid var(--border);
-  border-radius: var(--radius);
+  border-radius: var(--radius-lg);
   box-shadow: var(--shadow);
   animation: cert-pop-in 0.18s ease;
 }
@@ -51,7 +51,7 @@
   border-radius: 999px;
   background: var(--bg-elevated);
   color: var(--text);
-  font-size: 13px;
+  font-size: var(--fs-xs);
   transition:
     color 0.15s ease,
     border-color 0.15s ease;
@@ -81,8 +81,9 @@
 }
 
 .cert-modal-fallback {
+  font-family: var(--font-display);
   color: var(--border-strong);
-  font-size: 32px;
+  font-size: var(--fs-glyph);
   font-weight: 600;
   letter-spacing: 2px;
 }
@@ -100,7 +101,7 @@
   border-radius: 999px;
   background: color-mix(in srgb, var(--bg-elevated) 80%, transparent);
   color: var(--text-bright);
-  font-size: 20px;
+  font-size: var(--fs-icon);
   line-height: 1;
   transition:
     border-color 0.15s ease,
@@ -124,7 +125,6 @@
   position: absolute;
   bottom: 10px;
   left: 10px;
-  font-size: 11px;
   color: var(--text);
   background: color-mix(in srgb, var(--bg-elevated) 80%, transparent);
   border: 1px solid var(--border);
@@ -137,18 +137,34 @@
 }
 
 .cert-modal-info h3 {
-  font-size: 17px;
-  line-height: 1.5;
+  font-size: var(--fs-h3);
+  line-height: 1.4;
 }
 
 .cert-modal-issuer {
-  margin-top: 4px;
-  font-size: 12.5px;
+  margin-top: 6px;
+  font-size: var(--fs-xs);
   color: var(--text-dim);
 }
 
 @media (max-width: 560px) {
+  .cert-modal-backdrop {
+    padding: 14px;
+  }
+
+  .cert-modal {
+    max-height: 92vh;
+  }
+
   .cert-modal-info {
     padding: 18px 18px 22px;
+  }
+
+  .cert-modal-nav.prev {
+    left: 8px;
+  }
+
+  .cert-modal-nav.next {
+    right: 8px;
   }
 }

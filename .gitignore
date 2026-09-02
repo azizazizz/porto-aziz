@@ -39,3 +39,9 @@ src/assets/logos/logo *.png
 *.njsproj
 *.sln
 *.sw?
+
+# Markdown: only the README is tracked. Working notes and plans (edit.md and
+# friends) stay local — the negation below has to come after the ignore rule
+# to have any effect.
+*.md
+!README.md

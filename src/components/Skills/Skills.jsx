@@ -60,7 +60,7 @@ function Skills() {
       <div className="skills-grid">
         {GROUPS.map((group) => (
           <div className="skill-group" key={group.key}>
-            <p className="skill-group-label">{t.skills.groups[group.key]}</p>
+            <p className="skill-group-label label">{t.skills.groups[group.key]}</p>
             <div className="skill-chips">
               {group.items.map((item) => {
                 const Icon = item.icon

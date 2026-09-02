@@ -46,7 +46,7 @@ function Experience() {
                 {i !== ORDER.length - 1 && <span className="timeline-line" />}
               </div>
               <div className="timeline-content">
-                <p className="timeline-date">{role.date}</p>
+                <p className="timeline-date label">{role.date}</p>
                 <p className="timeline-title">
                   {role.title} <span className="at">@ {role.company}</span>
                 </p>
