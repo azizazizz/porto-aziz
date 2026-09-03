@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { useLanguage } from '../../hooks/useLanguage'
 import './CertificateModal.css'
 
@@ -6,6 +6,9 @@ function CertificateModal({ certificates, index, onIndexChange, onClose }) {
   const { t } = useLanguage()
   const cert = certificates[index]
   const many = certificates.length > 1
+  // keyed on the slug so stepping to another certificate shows its skeleton
+  const [loadedSlug, setLoadedSlug] = useState(null)
+  const loaded = loadedSlug === cert.slug
 
   useEffect(() => {
     const next = () => onIndexChange((index + 1) % certificates.length)
@@ -46,7 +49,14 @@ function CertificateModal({ certificates, index, onIndexChange, onClose }) {
 
         <div className="cert-modal-media">
           {cert.preview ? (
-            <img src={cert.preview} alt={cert.title} />
+            <>
+              {!loaded && <div className="cert-skeleton" aria-hidden="true" />}
+              <img
+                src={cert.preview}
+                alt={cert.title}
+                onLoad={() => setLoadedSlug(cert.slug)}
+              />
+            </>
           ) : (
             <div className="cert-modal-fallback">
               <span>PDF</span>

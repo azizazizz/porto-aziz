@@ -14,6 +14,10 @@ import SectionHeading from '../SectionHeading/SectionHeading'
 import { useLanguage } from '../../hooks/useLanguage'
 import './Skills.css'
 
+// `color` is each technology's own brand colour. The grid sits monochrome at
+// rest so it never reads as a swatch library; the colour only appears on the
+// chip you are pointing at or pressing. Entries without an official colour
+// (a language or a concept rather than a product) fall back to the accent.
 const GROUPS = [
   {
     key: 'frontend',
@@ -32,15 +36,13 @@ const GROUPS = [
       { name: 'PHP', icon: SiPhp, color: '#777bb4' },
       { name: 'CodeIgniter', icon: SiCodeigniter, color: '#ef4223' },
       { name: 'Node.js', icon: FaNodeJs, color: '#339933' },
-      { name: 'Hapi.js', icon: null },
+      { name: 'Hapi.js', icon: null, color: null },
     ],
   },
   {
     key: 'database',
     items: [
       { name: 'MySQL', icon: SiMysql, color: '#4479a1' },
-      // no brand colour: SQL is the language, not a product, and #4479a1 is
-      // MySQL's own blue — reusing it here would read as a duplicate chip
       { name: 'SQL', icon: FaDatabase, color: null },
     ],
   },
@@ -54,7 +56,7 @@ const GROUPS = [
       { name: 'Git', icon: FaGitAlt, color: '#f05032' },
       { name: 'GitHub', icon: FaGithub, color: null },
       { name: 'Arduino / IoT', icon: SiArduino, color: '#00979d' },
-      { tKey: 'security', icon: null },
+      { tKey: 'security', icon: null, color: null },
     ],
   },
 ]
@@ -80,7 +82,7 @@ function Skills() {
                     key={item.name || item.tKey}
                     style={{ '--chip-color': item.color || 'var(--accent)' }}
                   >
-                    {Icon && <Icon className="chip-icon" style={{ color: item.color }} />}
+                    {Icon && <Icon className="chip-icon" />}
                     {label}
                   </span>
                 )

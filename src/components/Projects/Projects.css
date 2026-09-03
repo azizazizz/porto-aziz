@@ -11,7 +11,6 @@
   border-radius: var(--radius-lg);
   overflow: hidden;
   background: var(--bg-elevated);
-  box-shadow: var(--shadow-sm);
   margin: 0;
   padding: 0;
   font: inherit;
@@ -19,15 +18,13 @@
   text-align: left;
   cursor: pointer;
   transition:
-    border-color 0.2s ease,
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
+    background 0.2s ease,
+    border-color 0.2s ease;
 }
 
 .project-card:hover {
-  border-color: color-mix(in srgb, var(--accent) 60%, var(--border));
-  transform: translateY(-4px);
-  box-shadow: var(--glow);
+  border-color: var(--accent);
+  background: var(--bg-hover);
 }
 
 .project-card:focus-visible {
@@ -52,39 +49,32 @@
   height: 100%;
   object-fit: contain;
   display: block;
-  transition: transform 0.5s ease;
 }
 
-.project-card:hover .project-media img {
-  transform: scale(1.06);
-}
-
+/* Flat placeholder — no dot grid, no gradient. */
 .media-placeholder {
   width: 100%;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  background:
-    radial-gradient(circle at 1px 1px, var(--border) 1px, transparent 0) 0 0 / 18px 18px,
-    linear-gradient(
-      155deg,
-      color-mix(in srgb, var(--accent) 14%, transparent),
-      transparent 65%
-    );
-  transition: transform 0.5s ease;
-}
-
-.project-card:hover .media-placeholder {
-  transform: scale(1.06);
+  background: var(--bg-inset);
 }
 
 .media-index {
-  font-family: var(--font-display);
   font-size: var(--fs-glyph);
   font-weight: 600;
   letter-spacing: -0.03em;
   color: var(--border-strong);
+}
+
+/* Skeleton: a flat block held at the frame size until the image decodes.
+   No shimmer — a pulsing gradient would put back two things just removed. */
+.media-skeleton {
+  position: absolute;
+  inset: 0;
+  background: var(--bg-inset);
+  border-bottom: 1px solid var(--border);
 }
 
 .media-overlay {
@@ -94,11 +84,6 @@
   align-items: flex-end;
   justify-content: center;
   padding-bottom: 22px;
-  background: linear-gradient(
-    to top,
-    color-mix(in srgb, var(--bg) 85%, transparent),
-    transparent 55%
-  );
   opacity: 0;
   transition: opacity 0.2s ease;
 }
@@ -113,17 +98,11 @@
   gap: 6px;
   font-size: var(--fs-xs);
   font-weight: 500;
-  color: var(--text-bright);
-  background: var(--bg-elevated);
+  color: var(--accent-contrast);
+  background: var(--accent);
   border: 1px solid var(--accent);
-  border-radius: 999px;
+  border-radius: var(--radius);
   padding: 8px 16px;
-  transform: translateY(8px);
-  transition: transform 0.2s ease;
-}
-
-.project-card:hover .media-overlay span {
-  transform: translateY(0);
 }
 
 .project-content {

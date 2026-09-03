@@ -6,9 +6,15 @@ function ProjectModal({ project, onClose }) {
   const { t } = useLanguage()
   const images = project.images && project.images.length > 0 ? project.images : null
   const [index, setIndex] = useState(0)
+  // reset per slide so a freshly requested screenshot shows its skeleton too
+  const [loaded, setLoaded] = useState(false)
 
-  const next = () => setIndex((i) => (i + 1) % images.length)
-  const prev = () => setIndex((i) => (i - 1 + images.length) % images.length)
+  const go = (i) => {
+    setLoaded(false)
+    setIndex(i)
+  }
+  const next = () => go((index + 1) % images.length)
+  const prev = () => go((index - 1 + images.length) % images.length)
 
   useEffect(() => {
     document.body.style.overflow = 'hidden'
@@ -47,9 +53,11 @@ function ProjectModal({ project, onClose }) {
         <div className="modal-media">
           {images ? (
             <>
+              {!loaded && <div className="modal-skeleton" aria-hidden="true" />}
               <img
                 src={images[index]}
                 alt={`${project.name} ${t.modal.screenshot} ${index + 1}`}
+                onLoad={() => setLoaded(true)}
               />
               {images.length > 1 && (
                 <>
@@ -87,6 +95,21 @@ function ProjectModal({ project, onClose }) {
           <p>{project.description}</p>
           <p className="modal-tags">{project.tags.join('  ·  ')}</p>
 
+          {(project.repo || project.demo) && (
+            <p className="modal-links">
+              {project.demo && (
+                <a href={project.demo} target="_blank" rel="noreferrer">
+                  {t.modal.demo}
+                </a>
+              )}
+              {project.repo && (
+                <a href={project.repo} target="_blank" rel="noreferrer">
+                  {t.modal.repo}
+                </a>
+              )}
+            </p>
+          )}
+
           {images && images.length > 1 && images.length <= 10 && (
             <div className="modal-dots">
               {images.map((_, i) => (
@@ -94,7 +117,7 @@ function ProjectModal({ project, onClose }) {
                   key={i}
                   type="button"
                   className={`dot${i === index ? ' active' : ''}`}
-                  onClick={() => setIndex(i)}
+                  onClick={() => go(i)}
                   aria-label={`${t.modal.goTo} ${i + 1}`}
                 />
               ))}

@@ -7,7 +7,6 @@
   justify-content: center;
   padding: 24px;
   background: color-mix(in srgb, var(--bg) 75%, black 25%);
-  backdrop-filter: blur(6px);
   animation: fade-in 0.15s ease;
 }
 
@@ -20,7 +19,6 @@
   background: var(--bg-elevated);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
-  box-shadow: var(--shadow);
   animation: pop-in 0.18s ease;
 }
 
@@ -35,7 +33,7 @@
   align-items: center;
   justify-content: center;
   border: 1px solid var(--border);
-  border-radius: 999px;
+  border-radius: var(--radius);
   background: var(--bg-elevated);
   color: var(--text);
   font-size: var(--fs-xs);
@@ -73,13 +71,14 @@
   justify-content: center;
   color: var(--text-dim);
   font-size: var(--fs-xs);
-  background:
-    radial-gradient(circle at 1px 1px, var(--border) 1px, transparent 0) 0 0 / 18px 18px,
-    linear-gradient(
-      155deg,
-      color-mix(in srgb, var(--accent) 14%, transparent),
-      transparent 65%
-    );
+  background: var(--bg-inset);
+}
+
+/* flat block until the screenshot decodes; no shimmer */
+.modal-skeleton {
+  position: absolute;
+  inset: 0;
+  background: var(--bg-inset);
 }
 
 .modal-nav {
@@ -92,7 +91,7 @@
   align-items: center;
   justify-content: center;
   border: 1px solid var(--border);
-  border-radius: 999px;
+  border-radius: var(--radius);
   background: color-mix(in srgb, var(--bg-elevated) 80%, transparent);
   color: var(--text-bright);
   font-size: var(--fs-icon);
@@ -114,7 +113,7 @@
   color: var(--text);
   background: color-mix(in srgb, var(--bg-elevated) 80%, transparent);
   border: 1px solid var(--border);
-  border-radius: 999px;
+  border-radius: var(--radius);
   padding: 4px 10px;
 }
 
@@ -149,6 +148,35 @@
   font-size: var(--fs-xs) !important;
 }
 
+.modal-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.modal-links a {
+  font-size: var(--fs-xs);
+  font-weight: 500;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  border-radius: var(--radius);
+  padding: 7px 14px;
+  transition:
+    background 0.15s ease,
+    color 0.15s ease;
+}
+
+.modal-links a:hover {
+  background: var(--accent);
+  color: var(--accent-contrast);
+}
+
+.modal-links a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
 .modal-dots {
   display: flex;
   justify-content: center;
@@ -159,7 +187,6 @@
 .dot {
   width: 7px;
   height: 7px;
-  border-radius: 50%;
   border: 1px solid var(--border-strong);
   background: transparent;
   padding: 0;

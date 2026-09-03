@@ -24,8 +24,20 @@ const PROJECTS = PROJECTS_META.map((project) => ({
 }))
 
 function ProjectMedia({ project, index }) {
+  const [loaded, setLoaded] = useState(false)
+
   if (project.images.length > 0) {
-    return <img src={project.images[0]} alt={project.name} loading="lazy" />
+    return (
+      <>
+        {!loaded && <div className="media-skeleton" aria-hidden="true" />}
+        <img
+          src={project.images[0]}
+          alt={project.name}
+          loading="lazy"
+          onLoad={() => setLoaded(true)}
+        />
+      </>
+    )
   }
   return (
     <div className="media-placeholder" aria-hidden="true">

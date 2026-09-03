@@ -2,14 +2,9 @@
   display: flex;
   align-items: center;
   border: 1px solid var(--accent);
-  border-radius: 999px;
+  border-radius: var(--radius);
   padding: 2px;
   flex-shrink: 0;
-  transition: box-shadow 0.15s ease;
-}
-
-.lang-toggle:hover {
-  box-shadow: 0 0 0 3px var(--accent-soft);
 }
 
 .lang-option {
@@ -21,7 +16,7 @@
   letter-spacing: 0.09em;
   text-transform: uppercase;
   padding: 5px 9px;
-  border-radius: 999px;
+  border-radius: var(--radius);
   line-height: 1;
   transition:
     color 0.15s ease,

@@ -10,16 +10,11 @@
   color: var(--accent);
 }
 
-/* short rule that fades out — a full-width divider made the heading read as a
-   log line, which is exactly the look this section is moving away from */
+/* short flat rule; a full-width divider made the heading read as a log line */
 .section-eyebrow .rule {
   width: 64px;
   height: 1px;
-  background: linear-gradient(
-    to right,
-    color-mix(in srgb, var(--accent) 60%, transparent),
-    transparent
-  );
+  background: var(--border-strong);
 }
 
 .section-heading {

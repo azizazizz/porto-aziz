@@ -1,14 +1,12 @@
 /* ----------------------------------------------------------------------------
    COLOUR — one accent, warm neutrals, nothing else.
 
-   An earlier pass gave every section its own hue (teal / blue / purple / pink).
-   Six accents across one page reads as decoration rather than intent, so the
-   palette is back to a single amber. The only other colour on the page is
-   borrowed from real brands — tech logos on the skill chips, and the social
-   links — which is colour that means something.
+   Amber is the only accent. Depth comes from flat surface steps and 1px
+   borders: there are no shadows, no gradients and no blurs anywhere in this
+   stylesheet, so a panel is distinguished by its own value, not by a glow.
 
-   The neutrals are warm-leaning on purpose: amber sits badly on the cold,
-   near-black ground this used to have.
+   Light theme deliberately avoids #ffffff. Pure white against warm neutrals
+   reads as a hole in the page rather than a raised surface.
    ---------------------------------------------------------------------------- */
 
 :root {
@@ -30,21 +28,16 @@
   --accent-contrast: #17181b;
 
   --green: #6fc490; /* the "available" status dot */
-  --blue: #6f96c4; /* the cool half of the hero wash */
-
-  --shadow-sm: 0 2px 10px -4px rgba(0, 0, 0, 0.5);
-  --shadow: 0 18px 44px -14px rgba(0, 0, 0, 0.55);
-  --glow: 0 18px 44px -18px color-mix(in srgb, var(--accent) 45%, transparent);
 }
 
 :root[data-theme='light'] {
   --bg: #fbfaf7;
-  --bg-elevated: #ffffff;
-  --bg-inset: #f3f1ec;
-  --bg-hover: #eeebe3;
+  --bg-elevated: #f7f5f0;
+  --bg-inset: #f1efe9;
+  --bg-hover: #eae7de;
 
-  --border: #e4e0d7;
-  --border-strong: #cac5b8;
+  --border: #e0dbd1;
+  --border-strong: #c5c0b2;
 
   --text: #4b4941;
   --text-dim: #716e64;
@@ -52,14 +45,9 @@
 
   --accent: #8d5f18;
   --accent-soft: rgba(141, 95, 24, 0.1);
-  --accent-contrast: #ffffff;
+  --accent-contrast: #fbfaf7;
 
   --green: #3f7c55;
-  --blue: #3d6a94;
-
-  --shadow-sm: 0 2px 10px -4px rgba(28, 27, 23, 0.12);
-  --shadow: 0 18px 44px -14px rgba(28, 27, 23, 0.16);
-  --glow: 0 18px 44px -18px color-mix(in srgb, var(--accent) 35%, transparent);
 }
 
 * {
@@ -67,11 +55,10 @@
 }
 
 /* ----------------------------------------------------------------------------
-   TYPE — three fonts, three jobs, no exceptions.
+   TYPE — one superfamily, two jobs.
 
-     Space Grotesk  headings, card titles, figures
-     Inter          everything meant to be read, and every piece of UI
-     JetBrains Mono index numerals (01, 02, 1/5) and the hero typewriter — only
+     IBM Plex Sans  headings, card titles, body copy, every piece of UI
+     IBM Plex Mono  index numerals (01, 02, 1/5) and the hero typewriter, only
 
    Monospace anywhere else is what made this page read as a terminal.
 
@@ -79,11 +66,12 @@
    ---------------------------------------------------------------------------- */
 
 :root {
-  --font-display: 'Space Grotesk', 'Inter', system-ui, sans-serif;
+  --font-display: 'IBM Plex Sans', system-ui, sans-serif;
   --font-sans:
-    'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue',
+    sans-serif;
   --font-mono:
-    'JetBrains Mono', ui-monospace, 'SFMono-Regular', Consolas,
+    'IBM Plex Mono', ui-monospace, 'SFMono-Regular', Consolas,
     'Liberation Mono', monospace;
 
   --fs-hero: clamp(36px, 8.5vw, 76px);
@@ -102,9 +90,11 @@
   /* Prose rule: page-level copy is --fs-body, copy inside a card or list is
      --fs-sm, supporting meta is --fs-xs, small caps labels are .label. */
 
-  --radius-sm: 8px;
-  --radius: 12px;
-  --radius-lg: 18px;
+  /* Square corners throughout. Kept as tokens so nothing has to hunt for a
+     literal 0, and so the decision stays in one place. */
+  --radius-sm: 0;
+  --radius: 0;
+  --radius-lg: 0;
   --content-width: 960px;
 
   color-scheme: dark light;

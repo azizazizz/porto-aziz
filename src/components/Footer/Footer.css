@@ -6,6 +6,29 @@
 }
 
 .footer p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
   font-size: var(--fs-xs);
   color: var(--text-dim);
+}
+
+.footer-sep {
+  width: 1px;
+  height: 12px;
+  background: var(--border-strong);
+}
+
+.footer a {
+  transition: color 0.15s ease;
+}
+
+.footer a:hover {
+  color: var(--accent);
+}
+
+.footer a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
 }

@@ -9,9 +9,10 @@
     border-color 0.2s ease;
 }
 
+/* Solid, not translucent: the blur that used to sit behind this was the one
+   piece of glassmorphism on the page. */
 .nav.scrolled {
-  background: color-mix(in srgb, var(--bg) 88%, transparent);
-  backdrop-filter: blur(10px);
+  background: var(--bg);
   border-bottom-color: var(--border);
 }
 
@@ -41,9 +42,8 @@
 
 .logo-word {
   letter-spacing: 3.5px;
-  /* letter-spacing also trails the final Z — pull the dot back against it */
+  /* letter-spacing also trails the final Z, so pull the dot back against it */
   margin-right: -3.5px;
-  transition: letter-spacing 0.25s ease;
 }
 
 .logo-dot {
@@ -52,7 +52,8 @@
   line-height: 0;
 }
 
-/* accent rule that sweeps in from the left on hover */
+/* Static underline that only changes colour on hover — it used to sweep in
+   from the left, and the wordmark used to widen its tracking with it. */
 .nav-logo::after {
   content: '';
   position: absolute;
@@ -60,19 +61,12 @@
   right: 2px;
   bottom: 0;
   height: 1.5px;
-  background: var(--accent);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.28s ease;
-}
-
-.nav-logo:hover .logo-word {
-  letter-spacing: 4.5px;
-  margin-right: -4.5px;
+  background: transparent;
+  transition: background 0.15s ease;
 }
 
 .nav-logo:hover::after {
-  transform: scaleX(1);
+  background: var(--accent);
 }
 
 .nav-links {
@@ -117,17 +111,15 @@
   font-weight: 500;
   color: var(--accent);
   border: 1px solid var(--accent);
-  border-radius: 999px;
+  border-radius: var(--radius);
   padding: 8px 17px;
   transition:
     background 0.15s ease,
-    box-shadow 0.15s ease,
     color 0.15s ease;
 }
 
 .nav-cta:hover {
   background: var(--accent-soft);
-  box-shadow: 0 0 0 3px var(--accent-soft);
 }
 
 @media (max-width: 1000px) {
@@ -148,8 +140,6 @@
     scrollbar-width: none;
     -webkit-overflow-scrolling: touch;
     padding-right: 8px;
-    /* soften the cut-off edge so it reads as scrollable, not clipped */
-    mask-image: linear-gradient(to right, #000 calc(100% - 28px), transparent 100%);
   }
   .nav-links::-webkit-scrollbar {
     display: none;

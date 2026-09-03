@@ -1,4 +1,4 @@
-import { FaMapMarkerAlt, FaRegCheckCircle } from 'react-icons/fa'
+import { FaBriefcase, FaMapMarkerAlt } from 'react-icons/fa'
 import { useTypewriter } from '../../hooks/useTypewriter'
 import { useLanguage } from '../../hooks/useLanguage'
 import { PROJECTS_META } from '../../data/projects'
@@ -13,8 +13,6 @@ function Hero() {
   const stats = [...t.hero.stats, { value: `${PROJECTS_META.length}+`, label: t.hero.projectsShipped }]
 
   return (
-    // The section runs full width so its colour wash can too; `.section` moves
-    // to the inner wrapper, which is what actually holds the content column.
     <section id="home" className="hero">
       <div className="hero-inner section">
         <p className="hero-status">
@@ -37,7 +35,7 @@ function Hero() {
             {t.hero.location}
           </li>
           <li>
-            <FaRegCheckCircle className="hero-meta-icon" aria-hidden="true" />
+            <FaBriefcase className="hero-meta-icon" aria-hidden="true" />
             {t.hero.availability}
           </li>
         </ul>

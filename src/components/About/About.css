@@ -1,10 +1,7 @@
+/* No left stripe: the lead is set apart by size and weight alone. */
 .about-lead {
-  position: relative;
   max-width: 60ch;
   margin-bottom: 32px;
-  padding-left: 20px;
-  border-left: 2px solid var(--accent);
-  font-family: var(--font-display);
   font-size: var(--fs-h3);
   font-weight: 500;
   line-height: 1.6;
@@ -66,17 +63,21 @@
   font-weight: 500;
   color: var(--accent);
   border: 1px solid var(--accent);
-  border-radius: 999px;
+  border-radius: var(--radius);
   transition:
     background 0.15s ease,
-    box-shadow 0.15s ease,
-    transform 0.15s ease;
+    border-color 0.15s ease,
+    color 0.15s ease;
 }
 
 .about-cv:hover {
-  background: var(--accent-soft);
-  box-shadow: 0 0 0 3px var(--accent-soft);
-  transform: translateY(-1px);
+  background: var(--accent);
+  color: var(--accent-contrast);
+}
+
+.about-cv:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
 }
 
 .about-cv-icon {

@@ -16,13 +16,12 @@
   flex-shrink: 0;
 }
 
+/* square, like every other corner on the page */
 .timeline-dot {
   width: 10px;
   height: 10px;
-  border-radius: 50%;
   border: 2px solid var(--accent);
   background: var(--bg);
-  box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 14%, transparent);
   margin-top: 6px;
   flex-shrink: 0;
 }
@@ -56,11 +55,7 @@
 .timeline-line {
   flex: 1;
   width: 1px;
-  background: linear-gradient(
-    to bottom,
-    color-mix(in srgb, var(--accent) 35%, transparent),
-    var(--border)
-  );
+  background: var(--border);
   margin: 6px 0;
 }
 

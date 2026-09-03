@@ -1,0 +1,84 @@
+/* Sticky like the main nav — otherwise it scrolls out with the rest of the
+   page and there is no way back to the top without scrolling all the way up. */
+.privacy-bar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+}
+
+.privacy-bar-inner {
+  width: min(1080px, 100%);
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.privacy-back {
+  font-size: var(--fs-xs);
+  font-weight: 500;
+  color: var(--text-dim);
+  transition: color 0.15s ease;
+}
+
+.privacy-back:hover {
+  color: var(--accent);
+}
+
+.privacy-back:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.privacy-bar-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.privacy {
+  max-width: 72ch;
+}
+
+.privacy-title {
+  font-size: var(--fs-h2);
+  line-height: 1.15;
+}
+
+.privacy-updated {
+  margin-top: 10px;
+  color: var(--text-dim);
+}
+
+.privacy-p {
+  margin-top: 20px;
+  font-size: var(--fs-body);
+  line-height: 1.8;
+  color: var(--text);
+}
+
+.privacy-contact {
+  margin-top: 32px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+  font-size: var(--fs-sm);
+  color: var(--text-dim);
+}
+
+.privacy-contact a {
+  color: var(--accent);
+}
+
+.privacy-contact a:hover {
+  color: var(--text-bright);
+}
+
+.privacy-contact a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}

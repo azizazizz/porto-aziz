@@ -5,6 +5,16 @@ import { CERTIFICATES, fallbackTitle } from './certificateData'
 import { useLanguage } from '../../hooks/useLanguage'
 import './Certificates.css'
 
+function CertThumb({ src, alt }) {
+  const [loaded, setLoaded] = useState(false)
+  return (
+    <>
+      {!loaded && <span className="cert-skeleton" aria-hidden="true" />}
+      <img src={src} alt={alt} loading="lazy" onLoad={() => setLoaded(true)} />
+    </>
+  )
+}
+
 function Certificates() {
   const { t } = useLanguage()
   const trackRef = useRef(null)
@@ -116,7 +126,7 @@ function Certificates() {
               >
                 <div className="cert-thumb">
                   {cert.preview ? (
-                    <img src={cert.preview} alt={cert.title} loading="lazy" />
+                    <CertThumb src={cert.preview} alt={cert.title} />
                   ) : (
                     <span className="cert-thumb-fallback" aria-hidden="true">
                       PDF

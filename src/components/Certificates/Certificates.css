@@ -33,7 +33,7 @@
   align-items: center;
   justify-content: center;
   border: 1px solid var(--border);
-  border-radius: 999px;
+  border-radius: var(--radius);
   background: transparent;
   color: var(--text);
   font-size: var(--fs-icon);
@@ -76,7 +76,7 @@
 
 .cert-track::-webkit-scrollbar-thumb {
   background: var(--border-strong);
-  border-radius: 999px;
+  border-radius: var(--radius);
 }
 
 .cert-card {
@@ -105,17 +105,24 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition:
-    border-color 0.18s ease,
-    transform 0.18s ease,
-    box-shadow 0.18s ease;
+  transition: border-color 0.18s ease;
 }
 
 .cert-card:hover .cert-thumb,
 .cert-card:focus-visible .cert-thumb {
-  border-color: color-mix(in srgb, var(--accent) 60%, var(--border));
-  transform: translateY(-4px);
-  box-shadow: var(--glow);
+  border-color: var(--accent);
+}
+
+.cert-card:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+/* flat block until the preview decodes; no shimmer */
+.cert-skeleton {
+  position: absolute;
+  inset: 0;
+  background: var(--bg-inset);
 }
 
 .cert-thumb img {

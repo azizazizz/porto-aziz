@@ -15,6 +15,9 @@
   gap: 10px;
 }
 
+/* Monochrome at rest, so thirteen logo colours never sit on screen at once.
+   Point at or press a chip and it takes that technology's own brand colour.
+   `--chip-color` is set per chip in Skills.jsx. */
 .chip {
   display: inline-flex;
   align-items: center;
@@ -23,15 +26,16 @@
   font-weight: 500;
   color: var(--text);
   border: 1px solid var(--border);
-  border-radius: 999px;
+  border-radius: var(--radius);
   background: var(--bg-elevated);
   padding: 8px 15px 8px 13px;
+  /* :active needs a real tap target on touch, where :hover never fires */
+  cursor: default;
+  -webkit-tap-highlight-color: transparent;
   transition:
     border-color 0.15s ease,
     color 0.15s ease,
-    background 0.15s ease,
-    box-shadow 0.15s ease,
-    transform 0.15s ease;
+    background 0.15s ease;
 }
 
 .chip-icon {
@@ -39,14 +43,19 @@
   height: 15px;
   flex-shrink: 0;
   color: var(--text-dim);
+  transition: color 0.15s ease;
 }
 
-.chip:hover {
+.chip:hover,
+.chip:active {
   border-color: var(--chip-color);
-  background: color-mix(in srgb, var(--chip-color) 12%, transparent);
+  background: color-mix(in srgb, var(--chip-color) 14%, var(--bg-elevated));
   color: var(--text-bright);
-  box-shadow: 0 6px 18px -10px color-mix(in srgb, var(--chip-color) 80%, transparent);
-  transform: translateY(-2px);
+}
+
+.chip:hover .chip-icon,
+.chip:active .chip-icon {
+  color: var(--chip-color);
 }
 
 @media (max-width: 560px) {

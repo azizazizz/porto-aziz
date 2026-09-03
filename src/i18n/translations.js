@@ -27,7 +27,7 @@ export const translations = {
     hero: {
       status: 'Fresh graduate',
       roles: ['Web Developer.'],
-      bio: 'I build web applications end to end — from the database schema to the very last pixel. Informatics graduate who cares as much about logic that holds up as about interfaces people genuinely enjoy using.',
+      bio: 'I build web applications end to end, from the database schema to the very last pixel. Informatics graduate who cares as much about logic that holds up as about interfaces people genuinely enjoy using.',
       location: 'Bekasi, Indonesia',
       availability: 'Available to start immediately',
       stats: [
@@ -41,10 +41,10 @@ export const translations = {
     about: {
       title: 'About Me',
       subtitle: "Who's behind the code",
-      lead: 'Tidy UI components only stand up on a tidy architecture underneath. I work on both — and judge the result by one thing: whether it feels effortless to the person using it.',
-      p1: "I'm an Informatics graduate on the Software Development track, focused on front-end web development. I work in the JavaScript ecosystem — Vue.js in particular — alongside Tailwind CSS to build tidy UI components, backed by a foundation in system architecture with PHP and CodeIgniter.",
-      p2: "I'm used to turning API integrations into interfaces that are responsive and accessible. I took my B.Sc. in Informatics at Bhayangkara Jakarta Raya University (2022–2026) with a 3.69 GPA; my thesis was a web-based student records archive built for a real elementary school — a working system, not a prototype.",
-      p3: 'I keep pushing the technical side forward, including hands-on work in the React.js ecosystem and modern tooling such as Vite, so that shipping quality digital products centred on the people using them stays routine rather than occasional.',
+      lead: 'Tidy UI components only stand up on a tidy architecture underneath. I work on both, and judge the result by one thing: whether it feels effortless to the person using it.',
+      p1: "I'm an Informatics graduate on the Software Development track, focused on front-end web development. I work in the JavaScript ecosystem, Vue.js in particular, alongside Tailwind CSS to build tidy UI components, backed by a foundation in system architecture with PHP and CodeIgniter.",
+      p2: "I'm used to turning API integrations into interfaces that are responsive and accessible. I took my B.Sc. in Informatics at Bhayangkara Jakarta Raya University (2022–2026) with a 3.69 GPA; my thesis was a web-based student records archive built for a real elementary school, and it went into daily use there.",
+      p3: 'I keep pushing the technical side forward, including hands-on work in the React.js ecosystem and modern tooling such as Vite, so that shipping quality digital products centred on the people using them stays part of my routine.',
       stackLabel: 'Technologies I work with often:',
       cv: 'View my CV',
     },
@@ -70,12 +70,12 @@ export const translations = {
         'sapu-jagat': {
           name: 'Sapu Jagat',
           description:
-            'Full-stack web app built as the capstone project for Coding Camp 2025 powered by DBS Foundation — a dynamic client, an efficient server, and an integrated Machine Learning API.',
+            'Full-stack web app built as the capstone project for Coding Camp 2025 powered by DBS Foundation: a dynamic client, an efficient server, and an integrated Machine Learning API.',
         },
         'share-story': {
           name: 'DStory',
           description:
-            'Progressive Web App built for the Web Development Intermediate course at Dicoding Indonesia — installable, works offline via IndexedDB, and layers in push notifications, live camera capture, and interactive Leaflet.js maps.',
+            'Progressive Web App built for the Web Development Intermediate course at Dicoding Indonesia: installable, works offline via IndexedDB, and layers in push notifications, live camera capture, and interactive Leaflet.js maps.',
         },
         'ukm-inventory': {
           name: 'Smart Toko',
@@ -85,7 +85,7 @@ export const translations = {
         'school-archive': {
           name: 'School Records Archive System',
           description:
-            "Undergraduate thesis project — a web-based student records archive system built on CodeIgniter and PHP for an elementary school, using a Boyer-Moore string-search algorithm for fast, accurate record lookups, and deployed locally on the school's own PC.",
+            "Undergraduate thesis project: a web-based student records archive system built on CodeIgniter and PHP for an elementary school, using a Boyer-Moore string-search algorithm for fast, accurate record lookups, and deployed locally on the school's own PC.",
         },
         'iot-balance': {
           name: 'IoT Balance Management System',
@@ -101,7 +101,7 @@ export const translations = {
         'coding-camp': {
           title: 'Front-End & Back-End Developer',
           company: 'Coding Camp 2025 powered by DBS Foundation',
-          date: 'Feb — Jul 2025',
+          date: 'Feb–Jul 2025',
           highlights: [
             'Applied web development knowledge end to end, from HTML, CSS, and JavaScript fundamentals through to more complex architectural concepts.',
             'Took an active part in collaboratively building a full-stack web-based final project.',
@@ -111,7 +111,7 @@ export const translations = {
         infradigital: {
           title: 'Ready4AI & Security Training',
           company: 'InfraDigital Foundation',
-          date: 'Feb — Aug 2024',
+          date: 'Feb–Aug 2024',
           highlights: [
             'Completed comprehensive cybersecurity training delivered by Microsoft via InfraDigital Foundation',
             'Studied cybersecurity fundamentals, threat landscapes, and mitigation techniques',
@@ -123,14 +123,14 @@ export const translations = {
     certificates: {
       title: 'Certificates',
       subtitle: 'Proof of the work',
-      empty: 'Certificates are on their way — this shelf is being filled in.',
+      empty: 'Certificates are on their way; this shelf is being filled in.',
       hint: 'Drag or scroll to browse',
       prev: 'Previous certificate',
       next: 'Next certificate',
       preview: 'Certificate preview',
       items: {
         '01-coding-camp-2025': {
-          title: 'Coding Camp 2025 — Distinction Graduate',
+          title: 'Coding Camp 2025: Distinction Graduate',
           issuer: 'DBS Foundation × Dicoding · Jul 2025',
         },
         '02-dasar-ai': {
@@ -174,7 +174,7 @@ export const translations = {
           issuer: 'Dicoding Indonesia · Feb 2025',
         },
         '12-uiux-kemnaker': {
-          title: 'Talent & Innovation Hub — UI/UX Design Fundamentals',
+          title: 'Talent & Innovation Hub: UI/UX Design Fundamentals',
           issuer: 'Indonesian Ministry of Manpower · Jul 2026',
         },
         '13-ready4ai-security': {
@@ -182,7 +182,7 @@ export const translations = {
           issuer: 'InfraDigital Foundation × Microsoft · Aug 2024',
         },
         '14-frontend-engineer-kemnaker': {
-          title: 'Talent & Innovation Hub — A Day in the Life of a Front End Engineer',
+          title: 'Talent & Innovation Hub: A Day in the Life of a Front End Engineer',
           issuer: 'Indonesian Ministry of Manpower · Aug 2026',
         },
       },
@@ -191,7 +191,7 @@ export const translations = {
       title: 'Contact',
       subtitle: "Let's talk",
       heading: "Let's build something together.",
-      text: "I'm currently open to new opportunities — internships, junior developer roles, or freelance projects. Whether you have a role in mind, an idea you want built, or just want to talk shop, my inbox is always open and I read every message.",
+      text: "I'm currently open to new opportunities: internships, junior developer roles, or freelance projects. Whether you have a role in mind, an idea you want built, or just want to talk shop, my inbox is always open and I read every message.",
     },
     modal: {
       close: 'Close',
@@ -200,6 +200,21 @@ export const translations = {
       goTo: 'Go to screenshot',
       screenshot: 'screenshot',
       comingSoon: 'Screenshots coming soon',
+      demo: 'Live demo',
+      repo: 'Source code',
+    },
+    privacy: {
+      title: 'Privacy',
+      back: 'Back to the portfolio',
+      updated: 'Last updated: September 2026',
+      body: [
+        'This site collects nothing about you. There is no analytics, no tracking pixel, no advertising network, and no cookie is written by this site.',
+        'There is no form here. The contact link opens your own email client; nothing is submitted to a server owned by me, and no message you write is stored anywhere on this site.',
+        'Your language and theme choices are kept in your browser using localStorage. That data never leaves your device and I have no way of reading it.',
+        'The one third-party request the page makes is to Google Fonts, which serves the typefaces. Google receives your IP address as part of that request, as it does for any resource loaded from its servers. If you would rather avoid it, a content blocker will stop the request and the site falls back to a system typeface.',
+        'The site is served as static files. There are no accounts, no databases, and no logs I control.',
+      ],
+      contactLabel: 'Questions about this page:',
     },
   },
 
@@ -224,7 +239,7 @@ export const translations = {
     hero: {
       status: 'Fresh graduate',
       roles: ['Web Developer.'],
-      bio: 'Saya membangun aplikasi web dari hulu ke hilir — dari skema database sampai piksel terakhir. Lulusan Informatika yang sama peduli pada logika yang kokoh dan antarmuka yang benar-benar nyaman dipakai.',
+      bio: 'Saya membangun aplikasi web dari hulu ke hilir, dari skema database sampai piksel terakhir. Lulusan Informatika yang sama peduli pada logika yang kokoh dan antarmuka yang benar-benar nyaman dipakai.',
       location: 'Bekasi, Indonesia',
       availability: 'Bersedia bekerja secepatnya',
       stats: [
@@ -238,9 +253,9 @@ export const translations = {
     about: {
       title: 'Tentang Saya',
       subtitle: 'Siapa di balik kodenya',
-      lead: 'Komponen UI yang rapi hanya bisa berdiri di atas arsitektur yang rapi juga. Saya mengerjakan keduanya — dan menilai hasilnya dari satu hal: nyaman atau tidak bagi orang yang memakainya.',
-      p1: 'Lulusan S1 Informatika dengan spesialisasi Software Development yang berfokus pada pengembangan Front-End Web. Saya memanfaatkan ekosistem JavaScript — terutama Vue.js — bersama Tailwind CSS untuk membangun komponen UI yang rapi, didukung fondasi arsitektur sistem menggunakan PHP dan CodeIgniter.',
-      p2: 'Saya terbiasa merancang integrasi API menjadi antarmuka yang responsif dan aksesibel. Pendidikan S1 Informatika saya tempuh di Universitas Bhayangkara Jakarta Raya (2022–2026) dengan IPK 3,69; skripsi saya berupa sistem arsip data siswa berbasis web yang dibangun untuk sekolah dasar sungguhan — sistem yang benar-benar berjalan, bukan sekadar purwarupa.',
+      lead: 'Komponen UI yang rapi hanya bisa berdiri di atas arsitektur yang rapi juga. Saya mengerjakan keduanya, dan menilai hasilnya dari satu hal: nyaman atau tidak bagi orang yang memakainya.',
+      p1: 'Lulusan S1 Informatika dengan spesialisasi Software Development yang berfokus pada pengembangan Front-End Web. Saya memanfaatkan ekosistem JavaScript, terutama Vue.js, bersama Tailwind CSS untuk membangun komponen UI yang rapi, didukung fondasi arsitektur sistem menggunakan PHP dan CodeIgniter.',
+      p2: 'Saya terbiasa merancang integrasi API menjadi antarmuka yang responsif dan aksesibel. Pendidikan S1 Informatika saya tempuh di Universitas Bhayangkara Jakarta Raya (2022–2026) dengan IPK 3,69; skripsi saya berupa sistem arsip data siswa berbasis web yang dibangun untuk sekolah dasar sungguhan, dan dipakai dalam keseharian mereka.',
       p3: 'Saya individu yang terus-menerus meningkatkan kemampuan teknis, termasuk implementasi praktis pada ekosistem React.js dan modern tooling seperti Vite, untuk secara rutin menghasilkan produk digital berkualitas yang berpusat pada kenyamanan pengguna.',
       stackLabel: 'Teknologi yang sering saya pakai:',
       cv: 'Lihat CV saya',
@@ -267,12 +282,12 @@ export const translations = {
         'sapu-jagat': {
           name: 'Sapu Jagat',
           description:
-            'Aplikasi web full-stack sebagai proyek akhir Coding Camp 2025 powered by DBS Foundation — sisi klien yang dinamis, server yang efisien, dan integrasi API Machine Learning.',
+            'Aplikasi web full-stack sebagai proyek akhir Coding Camp 2025 powered by DBS Foundation: sisi klien yang dinamis, server yang efisien, dan integrasi API Machine Learning.',
         },
         'share-story': {
           name: 'DStory',
           description:
-            'Progressive Web App yang dibangun untuk kelas Pengembangan Web Intermediate di Dicoding Indonesia — dapat diinstal, berjalan offline lewat IndexedDB, dilengkapi push notification, akses kamera langsung, dan peta interaktif dengan Leaflet.js.',
+            'Progressive Web App yang dibangun untuk kelas Pengembangan Web Intermediate di Dicoding Indonesia: dapat diinstal, berjalan offline lewat IndexedDB, dilengkapi push notification, akses kamera langsung, dan peta interaktif dengan Leaflet.js.',
         },
         'ukm-inventory': {
           name: 'Smart Toko',
@@ -282,7 +297,7 @@ export const translations = {
         'school-archive': {
           name: 'Sistem Arsip Data Siswa',
           description:
-            'Proyek skripsi — sistem arsip data siswa berbasis web dibangun dengan CodeIgniter dan PHP untuk sekolah dasar, menggunakan algoritma pencarian string Boyer-Moore agar pencarian data siswa cepat dan akurat, di-deploy secara lokal pada PC sekolah.',
+            'Proyek skripsi: sistem arsip data siswa berbasis web dibangun dengan CodeIgniter dan PHP untuk sekolah dasar, menggunakan algoritma pencarian string Boyer-Moore agar pencarian data siswa cepat dan akurat, di-deploy secara lokal pada PC sekolah.',
         },
         'iot-balance': {
           name: 'Sistem Manajemen Saldo IoT',
@@ -298,7 +313,7 @@ export const translations = {
         'coding-camp': {
           title: 'Front-End & Back-End Developer',
           company: 'Coding Camp 2025 powered by DBS Foundation',
-          date: 'Feb — Jul 2025',
+          date: 'Feb–Jul 2025',
           highlights: [
             'Menerapkan pengetahuan pengembangan web secara end-to-end, mulai dari fundamental HTML, CSS, dan JavaScript hingga konsep arsitektur yang lebih kompleks.',
             'Berpartisipasi aktif dalam pengembangan proyek akhir berbasis web full-stack secara kolaboratif.',
@@ -308,7 +323,7 @@ export const translations = {
         infradigital: {
           title: 'Pelatihan Ready4AI & Security',
           company: 'InfraDigital Foundation',
-          date: 'Feb — Agu 2024',
+          date: 'Feb–Agu 2024',
           highlights: [
             'Menyelesaikan pelatihan keamanan siber menyeluruh dari Microsoft melalui InfraDigital Foundation',
             'Mempelajari dasar keamanan siber, lanskap ancaman, dan teknik mitigasinya',
@@ -320,14 +335,14 @@ export const translations = {
     certificates: {
       title: 'Sertifikat',
       subtitle: 'Bukti dari perjalanannya',
-      empty: 'Sertifikat sedang disiapkan — rak ini akan segera terisi.',
+      empty: 'Sertifikat sedang disiapkan; rak ini akan segera terisi.',
       hint: 'Geser atau gulir untuk menelusuri',
       prev: 'Sertifikat sebelumnya',
       next: 'Sertifikat berikutnya',
       preview: 'Pratinjau sertifikat',
       items: {
         '01-coding-camp-2025': {
-          title: 'Coding Camp 2025 — Distinction Graduate',
+          title: 'Coding Camp 2025: Distinction Graduate',
           issuer: 'DBS Foundation × Dicoding · Jul 2025',
         },
         '02-dasar-ai': {
@@ -371,7 +386,7 @@ export const translations = {
           issuer: 'Dicoding Indonesia · Feb 2025',
         },
         '12-uiux-kemnaker': {
-          title: 'Talent & Innovation Hub — Fundamental UI/UX Design',
+          title: 'Talent & Innovation Hub: Fundamental UI/UX Design',
           issuer: 'Kementerian Ketenagakerjaan RI · Jul 2026',
         },
         '13-ready4ai-security': {
@@ -379,7 +394,7 @@ export const translations = {
           issuer: 'InfraDigital Foundation × Microsoft · Agu 2024',
         },
         '14-frontend-engineer-kemnaker': {
-          title: 'Talent & Innovation Hub — A Day in Life of a Front End Engineer',
+          title: 'Talent & Innovation Hub: A Day in Life of a Front End Engineer',
           issuer: 'Kementerian Ketenagakerjaan RI · Agu 2026',
         },
       },
@@ -388,7 +403,7 @@ export const translations = {
       title: 'Kontak',
       subtitle: 'Mari mengobrol',
       heading: 'Mari bangun sesuatu bersama.',
-      text: 'Saat ini saya terbuka untuk kesempatan baru — magang, posisi junior developer, atau proyek freelance. Entah Anda punya lowongan, ide yang ingin diwujudkan, atau sekadar ingin berdiskusi, kotak masuk saya selalu terbuka dan setiap pesan saya baca.',
+      text: 'Saat ini saya terbuka untuk kesempatan baru: magang, posisi junior developer, atau proyek freelance. Entah Anda punya lowongan, ide yang ingin diwujudkan, atau sekadar ingin berdiskusi, kotak masuk saya selalu terbuka dan setiap pesan saya baca.',
     },
     modal: {
       close: 'Tutup',
@@ -397,6 +412,21 @@ export const translations = {
       goTo: 'Ke tangkapan layar',
       screenshot: 'tangkapan layar',
       comingSoon: 'Tangkapan layar segera hadir',
+      demo: 'Demo langsung',
+      repo: 'Kode sumber',
+    },
+    privacy: {
+      title: 'Privasi',
+      back: 'Kembali ke portofolio',
+      updated: 'Terakhir diperbarui: September 2026',
+      body: [
+        'Situs ini tidak mengumpulkan apa pun tentang Anda. Tidak ada analytics, tidak ada pixel pelacak, tidak ada jaringan iklan, dan situs ini tidak menulis cookie sama sekali.',
+        'Tidak ada formulir di sini. Tautan kontak membuka aplikasi email Anda sendiri; tidak ada yang dikirim ke server milik saya, dan pesan yang Anda tulis tidak disimpan di mana pun pada situs ini.',
+        'Pilihan bahasa dan tema Anda disimpan di browser lewat localStorage. Data itu tidak pernah meninggalkan perangkat Anda dan saya tidak punya cara untuk membacanya.',
+        'Satu-satunya permintaan pihak ketiga yang dilakukan halaman ini adalah ke Google Fonts, yang menyediakan hurufnya. Google menerima alamat IP Anda sebagai bagian dari permintaan itu, sebagaimana berlaku untuk setiap sumber daya yang dimuat dari servernya. Jika Anda ingin menghindarinya, content blocker akan menghentikan permintaan tersebut dan situs ini beralih ke huruf bawaan sistem.',
+        'Situs ini disajikan sebagai berkas statis. Tidak ada akun, tidak ada basis data, dan tidak ada log yang saya kendalikan.',
+      ],
+      contactLabel: 'Pertanyaan tentang halaman ini:',
     },
   },
 }
