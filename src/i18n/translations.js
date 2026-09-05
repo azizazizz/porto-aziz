@@ -92,6 +92,11 @@ export const translations = {
           description:
             'IoT architecture built from scratch with RFID and Arduino integration, implementing balance management logic in C and validated through real-time data communication testing between the RFID reader and microcontroller.',
         },
+        'game-board': {
+          name: 'Game Board',
+          description:
+            'A side project for learning React.js: six classic board games in one app, Tic-Tac-Toe, Connect Four, Othello, Minesweeper, Sudoku, and Chess, wrapped in a single printed-paper look: warm paper, dark ink, no gradients or shadows.',
+        },
       },
     },
     experience: {
@@ -303,6 +308,11 @@ export const translations = {
           name: 'Sistem Manajemen Saldo IoT',
           description:
             'Arsitektur IoT yang dibangun dari nol dengan integrasi RFID dan Arduino, mengimplementasikan logika manajemen saldo dalam bahasa C dan divalidasi lewat pengujian komunikasi data real-time antara pembaca RFID dan mikrokontroler.',
+        },
+        'game-board': {
+          name: 'Game Board',
+          description:
+            'Proyek iseng untuk belajar React.js: enam papan permainan klasik dalam satu aplikasi, Tic-Tac-Toe, Connect Four, Othello, Minesweeper, Sudoku, dan Catur, dibungkus dalam satu tampilan bergaya kertas cetak: kertas hangat, tinta gelap, tanpa gradien atau bayangan.',
         },
       },
     },

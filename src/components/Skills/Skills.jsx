@@ -7,6 +7,7 @@ import {
   SiJavascript,
   SiMysql,
   SiPhp,
+  SiReact,
   SiTailwindcss,
   SiVuedotjs,
 } from 'react-icons/si'
@@ -26,6 +27,7 @@ const GROUPS = [
       { name: 'CSS', icon: FaCss3Alt, color: '#1572b6' },
       { name: 'JavaScript', icon: SiJavascript, color: '#f7df1e' },
       { name: 'Vue.js', icon: SiVuedotjs, color: '#4fc08d' },
+      { name: 'React.js', icon: SiReact, color: '#61dafb' },
       { name: 'Bootstrap', icon: SiBootstrap, color: '#7952b3' },
       { name: 'Tailwind CSS', icon: SiTailwindcss, color: '#06b6d4' },
     ],

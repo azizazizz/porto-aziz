@@ -10,8 +10,17 @@
  * project's modal; leave it null and nothing renders. They cannot live on the
  * card itself, because the card is a <button> and an <a> inside a <button> is
  * invalid HTML whose click would fight the one that opens the modal.
+ *
+ * Ordered newest-added first — put a new project at the top of this array,
+ * not the bottom.
  */
 export const PROJECTS_META = [
+  {
+    id: 'game-board',
+    tags: ['React', 'Tailwind CSS'],
+    repo: null,
+    demo: 'https://game-board-by-aziz.vercel.app/',
+  },
   {
     id: 'school-archive',
     tags: ['PHP', 'CodeIgniter', 'Bootstrap', 'SQL'],
@@ -22,13 +31,13 @@ export const PROJECTS_META = [
     id: 'sapu-jagat',
     tags: ['Vue.js', 'Tailwind CSS', 'Node.js', 'Hapi.js'],
     repo: null,
-    demo: null,
+    demo: 'https://sapujagat.netlify.app/',
   },
   {
     id: 'share-story',
     tags: ['JavaScript', 'Node.js', 'PWA', 'Leaflet.js'],
     repo: null,
-    demo: null,
+    demo: 'https://dstoryapp.netlify.app/',
   },
   {
     id: 'ukm-inventory',
