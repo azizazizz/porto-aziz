@@ -1,14 +1,8 @@
-import { FaRegFilePdf } from 'react-icons/fa'
 import SectionHeading from '../SectionHeading/SectionHeading'
 import { useLanguage } from '../../hooks/useLanguage'
 import './About.css'
 
 const STACK = ['JavaScript', 'Vue.js', 'Node.js', 'Hapi.js', 'PHP', 'CodeIgniter', 'Flutter', 'SQL']
-
-// Hosted on Google Drive rather than bundled, so the CV can be swapped out
-// without redeploying the site.
-const CV_URL =
-  'https://drive.google.com/file/d/13YoFfvUX7BOfnCuKQmt4llnMZX0c4vmH/view?usp=sharing'
 
 function About() {
   const { t } = useLanguage()
@@ -29,12 +23,6 @@ function About() {
             <li key={item}>{item}</li>
           ))}
         </ul>
-
-        <a href={CV_URL} target="_blank" rel="noreferrer" className="about-cv">
-          <FaRegFilePdf className="about-cv-icon" />
-          {t.about.cv}
-          <span aria-hidden="true">↗</span>
-        </a>
       </div>
     </section>
   )

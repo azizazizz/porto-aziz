@@ -46,7 +46,6 @@ export const translations = {
       p2: "I'm used to turning API integrations into interfaces that are responsive and accessible. I took my B.Sc. in Informatics at Bhayangkara Jakarta Raya University (2022–2026) with a 3.69 GPA; my thesis was a web-based student records archive built for a real elementary school, and it went into daily use there.",
       p3: 'I keep pushing the technical side forward, including hands-on work in the React.js ecosystem and modern tooling such as Vite, so that shipping quality digital products centred on the people using them stays part of my routine.',
       stackLabel: 'Technologies I work with often:',
-      cv: 'View my CV',
     },
     skills: {
       title: 'Skills',
@@ -263,7 +262,6 @@ export const translations = {
       p2: 'Saya terbiasa merancang integrasi API menjadi antarmuka yang responsif dan aksesibel. Pendidikan S1 Informatika saya tempuh di Universitas Bhayangkara Jakarta Raya (2022–2026) dengan IPK 3,69; skripsi saya berupa sistem arsip data siswa berbasis web yang dibangun untuk sekolah dasar sungguhan, dan dipakai dalam keseharian mereka.',
       p3: 'Saya individu yang terus-menerus meningkatkan kemampuan teknis, termasuk implementasi praktis pada ekosistem React.js dan modern tooling seperti Vite, untuk secara rutin menghasilkan produk digital berkualitas yang berpusat pada kenyamanan pengguna.',
       stackLabel: 'Teknologi yang sering saya pakai:',
-      cv: 'Lihat CV saya',
     },
     skills: {
       title: 'Keahlian',
