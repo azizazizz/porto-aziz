@@ -1,4 +1,4 @@
-import { FaBriefcase, FaMapMarkerAlt } from 'react-icons/fa'
+import { FaGraduationCap, FaMapMarkerAlt, FaRegCheckCircle } from 'react-icons/fa'
 import { useTypewriter } from '../../hooks/useTypewriter'
 import { useLanguage } from '../../hooks/useLanguage'
 import { PROJECTS_META } from '../../data/projects'
@@ -15,11 +15,6 @@ function Hero() {
   return (
     <section id="home" className="hero">
       <div className="hero-inner section">
-        <p className="hero-status">
-          <span className="status-dot" />
-          {t.hero.status}
-        </p>
-
         <h1 className="hero-name">Nur Aziz Raihan</h1>
 
         <p className="hero-role">
@@ -35,7 +30,11 @@ function Hero() {
             {t.hero.location}
           </li>
           <li>
-            <FaBriefcase className="hero-meta-icon" aria-hidden="true" />
+            <FaGraduationCap className="hero-meta-icon" aria-hidden="true" />
+            {t.hero.status}
+          </li>
+          <li>
+            <FaRegCheckCircle className="hero-meta-icon" aria-hidden="true" />
             {t.hero.availability}
           </li>
         </ul>

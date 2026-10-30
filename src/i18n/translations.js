@@ -66,6 +66,11 @@ export const translations = {
       subtitle: "Things I've actually shipped",
       view: 'View Project',
       items: {
+        'perumahan-solaville': {
+          name: 'Perumahan Solaville',
+          description:
+            'Live marketing website for Solaville, a premium mezzanine housing development in Serang Baru, Bekasi. Built with React, Tailwind CSS, and Vite, with unit type details, a photo gallery, an installment simulator that leads into a step-by-step order form for the Surat Pesanan Rumah (SPR, the home purchase order), an embedded Google Maps location, a WhatsApp contact button, and light/dark mode.',
+        },
         'sapu-jagat': {
           name: 'Sapu Jagat',
           description:
@@ -207,6 +212,11 @@ export const translations = {
       demo: 'Live demo',
       repo: 'Source code',
     },
+    notFound: {
+      title: 'Page not found',
+      text: "The page you're looking for doesn't exist, or the link has a typo. Let's get you back to the portfolio.",
+      back: 'Back to the portfolio',
+    },
     privacy: {
       title: 'Privacy',
       back: 'Back to the portfolio',
@@ -282,6 +292,11 @@ export const translations = {
       subtitle: 'Yang benar-benar saya kerjakan',
       view: 'Lihat Proyek',
       items: {
+        'perumahan-solaville': {
+          name: 'Perumahan Solaville',
+          description:
+            'Website pemasaran yang sudah online untuk Solaville, perumahan rumah mezzanine premium di Serang Baru, Bekasi. Dibangun dengan React, Tailwind CSS, dan Vite, lengkap dengan detail tipe unit, galeri foto, simulasi cicilan yang berlanjut ke pengisian data pemesanan bertahap untuk Surat Pesanan Rumah (SPR), lokasi Google Maps, tombol kontak WhatsApp, serta mode terang/gelap.',
+        },
         'sapu-jagat': {
           name: 'Sapu Jagat',
           description:
@@ -422,6 +437,11 @@ export const translations = {
       comingSoon: 'Tangkapan layar segera hadir',
       demo: 'Demo langsung',
       repo: 'Kode sumber',
+    },
+    notFound: {
+      title: 'Halaman tidak ditemukan',
+      text: 'Halaman yang Anda cari tidak ada, atau tautannya salah ketik. Mari kembali ke portofolio.',
+      back: 'Kembali ke portofolio',
     },
     privacy: {
       title: 'Privasi',

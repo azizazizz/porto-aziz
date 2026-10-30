@@ -1,0 +1,88 @@
+.notfound-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.notfound-bar-inner {
+  width: min(1080px, 100%);
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.notfound {
+  flex: 1;
+  width: min(640px, 100%);
+  margin: 0 auto;
+  padding: 24px 24px 96px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 16px;
+}
+
+.notfound-code {
+  font-family: var(--font-mono);
+  font-size: clamp(72px, 22vw, 144px);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: var(--accent);
+}
+
+.notfound-title {
+  font-size: var(--fs-h2);
+  line-height: 1.15;
+}
+
+.notfound-text {
+  max-width: 48ch;
+  font-size: var(--fs-body);
+  line-height: 1.8;
+  color: var(--text);
+}
+
+.notfound-btn {
+  margin-top: 12px;
+  padding: 13px 26px;
+  font-size: var(--fs-sm);
+  font-weight: 500;
+  color: var(--accent-contrast);
+  background: var(--accent);
+  border: 1px solid var(--accent);
+  border-radius: var(--radius);
+  transition:
+    background 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.notfound-btn:hover {
+  background: var(--text-bright);
+  border-color: var(--text-bright);
+}
+
+.notfound-btn:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+@media (max-width: 480px) {
+  .notfound-bar-inner {
+    padding: 0 16px;
+  }
+
+  .notfound {
+    padding: 16px 20px 72px;
+  }
+
+  .notfound-btn {
+    align-self: stretch;
+    text-align: center;
+  }
+}

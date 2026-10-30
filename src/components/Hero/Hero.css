@@ -25,9 +25,6 @@
   animation: hero-in 0.7s cubic-bezier(0.22, 1, 0.36, 1) backwards;
 }
 
-.hero-status {
-  animation-delay: 0.05s;
-}
 .hero-name {
   animation-delay: 0.16s;
 }
@@ -66,25 +63,6 @@
   .hero-stat {
     animation: none;
   }
-}
-
-.hero-status {
-  display: flex;
-  align-items: center;
-  gap: 9px;
-  font-size: var(--fs-xs);
-  color: var(--text-dim);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  background: var(--bg-elevated);
-  padding: 7px 15px;
-  margin-bottom: 8px;
-}
-
-.status-dot {
-  width: 7px;
-  height: 7px;
-  background: var(--green);
 }
 
 .hero-name {
@@ -134,7 +112,7 @@
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  gap: 6px 24px;
+  gap: 8px 24px;
   font-size: var(--fs-sm);
   color: var(--text-dim);
 }

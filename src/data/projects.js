@@ -16,6 +16,12 @@
  */
 export const PROJECTS_META = [
   {
+    id: 'perumahan-solaville',
+    tags: ['React', 'Tailwind CSS', 'Vite'],
+    repo: null,
+    demo: 'https://perumahansolaville.com/',
+  },
+  {
     id: 'game-board',
     tags: ['React', 'Tailwind CSS'],
     repo: null,

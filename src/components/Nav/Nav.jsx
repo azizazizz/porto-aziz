@@ -44,21 +44,12 @@ function Nav() {
 
   const handleClick = (id) => (event) => {
     event.preventDefault()
-    if (id === 'top') {
-      window.scrollTo({ top: 0, behavior: 'smooth' })
-      return
-    }
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
   }
 
   return (
     <nav className={`nav${scrolled ? ' scrolled' : ''}`}>
       <div className="nav-inner">
-        <a href="#top" className="nav-logo" onClick={handleClick('top')} aria-label={t.nav.home}>
-          <span className="logo-word">AZIZ</span>
-          <span className="logo-dot" aria-hidden="true">.</span>
-        </a>
-
         <div className="nav-links">
           {LINKS.map((link) => (
             <a
